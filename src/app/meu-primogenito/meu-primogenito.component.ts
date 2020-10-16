@@ -16,8 +16,8 @@ export class MeuPrimogenitoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onInput(ev) {
-    this.filho.nome = ev.target.value
+  onInput(ev: KeyboardEvent) {
+    this.filho.nome = (ev.target as HTMLInputElement).value
   }
 
 }
