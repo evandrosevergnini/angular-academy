@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Filho } from './filho';
 
 @Component({
@@ -8,10 +8,10 @@ import { Filho } from './filho';
 })
 export class MeuPrimogenitoComponent implements OnInit {
 
+  @Input()
   filho: Filho;
-  constructor() {
-    this.filho = new Filho('Evandro');
-  }
+
+  constructor() {}
 
   ngOnInit(): void {
   }
