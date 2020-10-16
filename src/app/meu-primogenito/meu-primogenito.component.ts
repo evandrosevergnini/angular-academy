@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Filho } from './filho';
 
 @Component({
   selector: 'meu-primogenito',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeuPrimogenitoComponent implements OnInit {
 
-  constructor() { }
+  filho: Filho;
+  constructor() {
+    this.filho = new Filho('Evandro');
+  }
 
   ngOnInit(): void {
+  }
+
+  onInput(ev) {
+    this.filho.nome = ev.target.value
   }
 
 }
