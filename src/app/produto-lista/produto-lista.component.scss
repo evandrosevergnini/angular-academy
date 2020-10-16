@@ -1,0 +1,19 @@
+.produto-lista {
+  .produto {
+    &.first {
+      border-top: 3px solid var(--primary);
+    }
+    &.last {
+      border-bottom: 3px solid var(--primary);
+    }
+    &.even {
+      background: hsla(195, 100%, 100%, 0.1);
+    }
+    &.odd {
+      background: hsla(195, 0%, 0%, 0.1);
+    }
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+}

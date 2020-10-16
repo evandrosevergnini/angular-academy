@@ -1,0 +1,14 @@
+
+<section>
+  <h1>Lista de Produtos</h1>
+  <ul class="produto-lista">
+    <li class="produto"
+    [ngClass]="{'first': first, 'last': last, 'even': even, 'odd': odd}"
+     *ngFor="let produto of produtos; index as i; first as first; last as last; even as even; odd as odd">
+      <span class="item">{{i + 1}}</span>
+      <span class="nome">{{produto.nome}}</span>
+      <span class="descricao" [textContent]="produto.descricao"></span>
+      <span class="preco">{{produto.preco}}</span>
+    </li>
+  </ul>
+</section>

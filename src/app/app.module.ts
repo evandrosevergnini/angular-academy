@@ -3,15 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MeuPrimogenitoComponent } from './meu-primogenito/meu-primogenito.component';
 import { FormsModule } from '@angular/forms';
-import { RegistroCivilComponent } from './registro-civil/registro-civil.component';
+import { ProdutoListaComponent } from './produto-lista/produto-lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeuPrimogenitoComponent,
-    RegistroCivilComponent
+    ProdutoListaComponent,
   ],
   imports: [
     BrowserModule,
