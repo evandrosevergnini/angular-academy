@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Filho } from './filho';
+import { Filho } from '../models/filho';
 
 @Component({
   selector: 'meu-primogenito',
