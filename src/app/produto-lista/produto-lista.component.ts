@@ -10,8 +10,10 @@ import { Produto } from './produto';
 export class ProdutoListaComponent implements OnInit {
 
   produtos: Produto[];
-
-  constructor() { }
+  now: Date;
+  constructor() {
+    this.now = new Date();
+   }
 
   ngOnInit(): void {
     this.produtos = PRODUTOS;

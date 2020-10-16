@@ -1,14 +1,23 @@
-
 <section>
   <h1>Lista de Produtos</h1>
+  {{ now | date: 'dd/MM/yyyy hh:mm:ss' }}
   <ul class="produto-lista">
-    <li class="produto"
-    [ngClass]="{'first': first, 'last': last, 'even': even, 'odd': odd}"
-     *ngFor="let produto of produtos; index as i; first as first; last as last; even as even; odd as odd">
-      <span class="item">{{i + 1}}</span>
-      <span class="nome">{{produto.nome}}</span>
+    <li
+      class="produto"
+      [ngClass]="{ first: first, last: last, even: even, odd: odd }"
+      *ngFor="
+        let produto of produtos;
+        index as i;
+        first as first;
+        last as last;
+        even as even;
+        odd as odd
+      "
+    >
+      <span class="item">{{ i + 1 }}</span>
+      <span class="nome">{{ produto.nome | uppercase }}</span>
       <span class="descricao" [textContent]="produto.descricao"></span>
-      <span class="preco">{{produto.preco}}</span>
+      <span class="preco">{{ produto.preco | currency: "BRL" }}</span>
     </li>
   </ul>
 </section>
