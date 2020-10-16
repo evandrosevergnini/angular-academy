@@ -1,6 +1,6 @@
 <section>
   <h1>Lista de Produtos</h1>
-  {{ now | date: 'dd/MM/yyyy hh:mm:ss' }}
+  {{ now | date: "dd/MM/yyyy hh:mm:ss" }}
   <ul class="produto-lista">
     <li
       class="produto"
@@ -17,7 +17,12 @@
       <span class="item">{{ i + 1 }}</span>
       <span class="nome">{{ produto.nome | uppercase }}</span>
       <span class="descricao" [textContent]="produto.descricao"></span>
-      <span class="preco">{{ produto.preco | currency: "BRL" }}</span>
+      <span class="preco" *ngIf="produto.preco < 10; else precoComDesconto">{{
+        produto.preco | currency: "BRL"
+      }}</span>
+      <ng-template #precoComDesconto>
+        <span class="preco desconto">{{ 10 | currency: "BRL" }}</span>
+      </ng-template>
     </li>
   </ul>
 </section>
