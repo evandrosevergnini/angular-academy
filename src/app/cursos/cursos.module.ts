@@ -5,11 +5,12 @@ import { HttpClient, HttpClientJsonpModule, HttpClientModule } from '@angular/co
 import { CursosRoutingModule } from './cursos-routing.module';
 import { CursosComponent } from './cursos.component';
 import { CursoCardComponent } from './curso-card/curso-card.component';
+import { CursoService } from './curso.service';
 
 @NgModule({
   declarations: [CursosComponent, CursoCardComponent],
   imports: [CommonModule, CursosRoutingModule, HttpClientModule],
-  providers: [HttpClient],
-  exports: [CursosComponent],
+  providers: [HttpClient, CursoService],
+  exports: [CursosComponent]
 })
 export class CursosModule {}
