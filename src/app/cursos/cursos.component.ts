@@ -15,11 +15,11 @@ export class CursosComponent implements OnInit {
   cursos$: Observable<Curso[]>;
   erro: boolean;
 
-  constructor(private http: HttpClient, private cursoService: CursoService) {}
+  constructor(private cursoService: CursoService) {}
 
   ngOnInit(): void {
     console.log(this);
-    this.cursos$ = this.http.get<Curso[]>('http://localhost:3000/cursos')
+    this.cursos$ = this.cursoService.carregaCursos()
     .pipe(
       catchError( error => {
         this.erro = true;
