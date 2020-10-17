@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Curso } from './curso';
+import { CursoService } from './curso.service';
 
 @Component({
   selector: 'cursos',
@@ -14,9 +15,10 @@ export class CursosComponent implements OnInit {
   cursos$: Observable<Curso[]>;
   erro: boolean;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private cursoService: CursoService) {}
 
   ngOnInit(): void {
+    console.log(this);
     this.cursos$ = this.http.get<Curso[]>('http://localhost:3000/cursos')
     .pipe(
       catchError( error => {
