@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./livros/livros.module').then((m) => m.LivrosModule),
   },
+  {
+    path: 'cursos',
+    loadChildren: () =>
+      import('./cursos/cursos.module').then((m) => m.CursosModule),
+  },
 ];
 
 @NgModule({

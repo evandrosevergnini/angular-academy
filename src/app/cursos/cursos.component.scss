@@ -1,0 +1,13 @@
+.cursos {
+  &__lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  &__lista-item {
+    flex-basis: 300px;
+    flex-shrink: 0;
+  }
+}

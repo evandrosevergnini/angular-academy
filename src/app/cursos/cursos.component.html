@@ -1,0 +1,13 @@
+<section class="cursos">
+  <h1>Lista de Cursos</h1>
+  <ul class="cursos__lista" *ngIf="!erro; else errorMessage">
+    <li  class="cursos__lista-item" *ngFor="let curso of cursos;">
+      <curso-card [curso]="curso"></curso-card>
+    </li>
+  </ul>
+  <ng-template #errorMessage>
+    <p class="error-message" role="alert">
+      Ops! Pifou o serviço!!!
+    </p>
+  </ng-template>
+</section>
