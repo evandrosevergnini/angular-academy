@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, InjectionToken, OnInit } from '@angular/core';
 import { CursoService } from './cursos/curso.service';
+
+const CURSO_SERVICE = new InjectionToken<CursoService>('CURSO_SERVICES');
+function cursoSeviceProvider(http: HttpClient): CursoService {
+  return new CursoService(http);
+}
 
 @Component({
   selector: 'app-root',
