@@ -1,0 +1,38 @@
+.livro-card {
+  box-shadow: 0 0 15px 2px hsla(219, 98%, 33%, 0.438);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  max-width: 450px;
+  &__imagem {
+    height: 180px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 0.5rem;
+  }
+  &__texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 100%;
+    background: hsla(0, 100%, 100%, 0.3);
+  }
+  &__nome {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 1rem;
+    color: lightblue;
+    background: rgb(2, 77, 121);
+  }
+  &__autor {
+    padding: 1rem;
+    flex-grow: 1;
+  }
+  &__preco {
+    align-self: flex-end;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 2px solid hsla(0, 0%, 0%, 0.3);
+    border-radius: 5px;
+  }
+}

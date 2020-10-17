@@ -1,0 +1,9 @@
+.livros {
+  &__lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    list-style: none;
+  }
+}

@@ -1,1 +1,11 @@
-<p>livros works!</p>
+<section class="livros">
+  <h1>Lista de Livros:</h1>
+  <ul class="livros__lista" *ngIf="!erro; else errorMessage">
+    <li class="livros" *ngFor="let livro of livros">
+      <livro-card [livro]="livro"></livro-card>
+    </li>
+  </ul>
+  <ng-template #errorMessage>
+    <p class="error-message" role="alert">Ops! Pifou o serviço!!!</p>
+  </ng-template>
+</section>
