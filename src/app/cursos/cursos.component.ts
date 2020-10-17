@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Curso } from './curso';
 
 @Component({
@@ -9,22 +11,20 @@ import { Curso } from './curso';
 })
 export class CursosComponent implements OnInit {
 
-  cursos: Curso[];
+  cursos$: Observable<Curso[]>;
   erro: boolean;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/cursos')
-    .subscribe(
-      cursos => {
-        this.cursos = <Curso[]>cursos;
-      },
-      err => {
+    this.cursos$ = this.http.get<Curso[]>('http://localhost:3000/cursos')
+    .pipe(
+      catchError( error => {
         this.erro = true;
-        console.error('Erro ao buscar cursos', err)
-      }
-    )
+        console.error('Ocorreu um erro ao buscar lista de cursos', error);
+        return of<Curso[]>();
+      })
+    );
   }
 
 }
