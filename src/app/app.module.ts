@@ -8,19 +8,21 @@ import { ProdutoListaComponent } from './produto-lista/produto-lista.component';
 import { LivrosModule } from './livros/livros.module';
 import { CursosModule } from './cursos/cursos.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutoListaComponent,
     PageNotFoundComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    LivrosModule,
-    CursosModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
