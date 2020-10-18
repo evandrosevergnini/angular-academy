@@ -6,13 +6,20 @@ header, main {
 }
 header {
   background: #1B305A;
-  height: 6rem;
+  min-height: 6rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   box-shadow: 0 1rem 5px hsla(195, 0%, 0%, 0.1);
+  padding:  0 1.6rem;
+  @media (min-width: 1232px) {
+    padding: 0 calc( (100% - 1200px) / 2 );
+  }
   h1 {
+    font-size: 2.5rem;
     color: var(--primary-light);
     margin-bottom: 0;
+    margin-right: 2rem;
     display: inline-flex;
     align-items: center;
     img {
@@ -20,8 +27,7 @@ header {
       height: 6rem;
       background: #1B305A;
       margin-left: 1rem;
-      margin-right: 3rem;
-      transform: scale(1.5);
+      margin-right: 1rem;
       box-shadow: 0 1rem 5px hsla(195, 0%, 0%, 0.3);
       border-radius: 50%;
       padding: 1rem;
@@ -31,4 +37,49 @@ header {
 main {
   padding-top: 3rem;
   padding-bottom: 6rem;
+}
+
+.topo-da-pagina {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  background: #1a355b;
+  box-shadow: 0 0 30px 5px hsla(0, 0%, 0%, 0.5);
+  h1 a {
+    padding: 0 1rem;
+    color:#FF4A39;
+  }
+  a {
+      color: var(--primary-light);
+      padding: 0 1rem;
+      text-decoration: none;
+  }
+  nav {
+    display: flex;
+    align-items: stretch;
+    height: 6rem;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  li {
+    display: flex;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  .link-active {
+    background: hsla(0, 0%, 0%, 0.3);
+    border-bottom: 5px solid #FF4A39;
+    transition: all 0.3s ease-in-out;
+  }
 }

@@ -1,6 +1,21 @@
-<header>
+<header class="topo-da-pagina">
   <h1><img src="../assets/svg/logo.svg" alt=""><span>{{ title }}</span></h1>
+  <nav>
+    <ul>
+      <li>
+        <a [routerLink]="['/cursos']" routerLinkActive="link-active"
+          >Cursos</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/livros']" routerLinkActive="link-active">Livros</a>
+      </li>
+      <li>
+        <a [routerLink]="['/cantina']" routerLinkActive="link-active">Cantina</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 <main>
-  <cursos></cursos>
+  <router-outlet></router-outlet>
 </main>

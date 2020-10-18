@@ -7,11 +7,13 @@ import { FormsModule } from '@angular/forms';
 import { ProdutoListaComponent } from './produto-lista/produto-lista.component';
 import { LivrosModule } from './livros/livros.module';
 import { CursosModule } from './cursos/cursos.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutoListaComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
