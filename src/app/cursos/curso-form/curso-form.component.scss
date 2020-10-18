@@ -1,0 +1,29 @@
+.curso-form {
+  &__group-form {
+    display: flex;
+    flex-direction: column;
+    margin: 1.6rem 0;
+    span {
+      font-family: sans-serif;
+    }
+    input, select{
+      height: 4.5rem;
+      padding: 0 1rem;
+    }
+  }
+  button {
+    height: 4.5rem;
+    padding: 0 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a355b;
+    color: lightblue;
+    border-radius: 5px;
+    min-width: 17rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    box-shadow: 0 0 5px 2px hsla(0, 0%, 0%, 0.3);
+    cursor: pointer;
+  }
+}

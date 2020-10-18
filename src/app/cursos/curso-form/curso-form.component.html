@@ -1,2 +1,33 @@
-<p>curso-form works!</p>
-{{ curso | json }}
+<section class="curso-form">
+  <h2>Formulário de Curso</h2>
+  <form>
+    <label class="curso-form__group-form">
+      <span>Nome:</span>
+      <input type="text" name="name" [(ngModel)]="curso.name" />
+    </label>
+    <label class="curso-form__group-form">
+      <span>Url da Imagem:</span>
+      <input type="text" name="imgUrl" [(ngModel)]="curso.imgUrl" />
+    </label>
+    <label class="curso-form__group-form">
+      <span>Descrição:</span>
+      <input type="text" name="description" [(ngModel)]="curso.description" />
+    </label>
+    <label class="curso-form__group-form">
+      <span>Categoria:</span>
+      <select name="category" [(ngModel)]="curso.category">
+        <option *ngFor="let category of categories" [value]="category">
+          {{ category }}
+        </option>
+      </select>
+    </label>
+    <!-- <label class="curso-form__group-form">
+      <span>Categoria:</span>
+      <label *ngFor="let category of categories">
+        <input type="radio" name="category" [(ngModel)]="curso.category" [value]="category" />
+        {{ category | lowercase }}
+      </label>
+    </label> -->
+    <button (click)="salvaCurso()" type="button">Salvar</button>
+  </form>
+</section>
