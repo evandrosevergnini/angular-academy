@@ -2,5 +2,8 @@
   <p class="curso-card__nome">{{ curso.name }}</p>
   <img class="curso-card__imagem" [src]="curso.imgUrl" alt="" />
   <p class="curso-card__descricao" [textContent]="curso.description"></p>
-  <span class="curso-card__categoria">{{ curso.category }}</span>
+  <div class="curso-card__line">
+    <span class="curso-card__categoria">{{ curso.category }}</span>
+    <a class="curso-card__id" [routerLink]="curso.id" >Editar</a>
+  </div>
 </div>

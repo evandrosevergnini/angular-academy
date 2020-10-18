@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Curso } from './curso';
-import { CursoService } from './curso.service';
+import { CursoService } from './services/curso.service';
 
 @Component({
   selector: 'cursos',
