@@ -5,11 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ProdutoListaComponent } from './produto-lista/produto-lista.component';
-import { LivrosModule } from './livros/livros.module';
-import { CursosModule } from './cursos/cursos.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
+import { GenericCardComponent } from './generic-card/generic-card.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +16,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     ProdutoListaComponent,
     PageNotFoundComponent,
     HomePageComponent,
+    GenericCardComponent,
   ],
   imports: [
     BrowserModule,

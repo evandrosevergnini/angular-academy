@@ -17,5 +17,10 @@
   </nav>
 </header>
 <main>
-  <router-outlet></router-outlet>
+  <generic-card title="Título">
+    <input type="text" [(ngModel)]="title">
+    <p>meu texto no card</p>
+    <div footer>Rodapé</div>
+  </generic-card>
+  <!-- <router-outlet></router-outlet> -->
 </main>
