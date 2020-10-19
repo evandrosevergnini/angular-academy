@@ -6,16 +6,19 @@ import { Filho } from './models/filho';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Angular Academy';
   filho: Filho;
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     const context = this;
     setTimeout(() => {
       context.filho = new Filho('Evandro');
     }, 5000);
   }
+
 
   confereNomeAlterado(filho: Filho){
     console.log(this.filho.nome);
