@@ -1,6 +1,18 @@
 <div class="meu-primogenito">
-  <p>Meu primogênito: é {{ filho.nome }} </p>
-  <input type="text" [value]="filho.nome" />
-  <input type="text" [(value)]="filho.nome" (input)="onInput($event)"/>
-  <input type="text" [(ngModel)]="filho.nome" />
+  <!-- <p>Meu primogênito: é {{ filho.nome }} </p> -->
+  <!-- <input type="text" [value]="filho.nome" /> -->
+  <!-- <input type="text" [value]="filho.nome" (input)="onInput($event)"/> -->
+  <label style="display: flex; flex-direction: column">
+    <span>Filho:</span>
+    <input type="text" #filhoEl [(ngModel)]="filho.nome" />
+  </label>
+  <br />
+  <label style="display: flex; flex-direction: column">
+    <span>Neto: {{ neto.nome }}</span>
+    <input
+      type="text"
+      [ngModel]="neto.nome"
+      (ngModelChange)="onModelChange($event)"
+    />
+  </label>
 </div>
